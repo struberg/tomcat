@@ -270,7 +270,7 @@ public class JreMemoryLeakPreventionListener implements LifecycleListener {
                  *
                  * Those libraries / components known to trigger memory leaks
                  * due to eventual calls to requestLatency(long) are:
-                 * - javax.management.remote.rmi.RMIConnectorServer.start()
+                 * - jakarta.management.remote.rmi.RMIConnectorServer.start()
                  *
                  * Note: Long.MAX_VALUE is a special case that causes the thread
                  *       to terminate
@@ -326,7 +326,7 @@ public class JreMemoryLeakPreventionListener implements LifecycleListener {
                  * Those libraries/components known to trigger this issue
                  * include:
                  * - log4j versions 1.2.15 and earlier
-                 * - javax.xml.bind.JAXBContext.newInstance()
+                 * - jakarta.xml.bind.JAXBContext.newInstance()
                  *
                  * https://bugs.openjdk.java.net/browse/JDK-8163449
                  *

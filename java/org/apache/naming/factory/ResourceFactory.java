@@ -42,9 +42,9 @@ public class ResourceFactory extends FactoryBase {
 
         ObjectFactory factory = null;
 
-        if (ref.getClassName().equals("javax.sql.DataSource")) {
+        if (ref.getClassName().equals("jakarta.sql.DataSource")) {
             String javaxSqlDataSourceFactoryClassName =
-                System.getProperty("javax.sql.DataSource.Factory",
+                System.getProperty("jakarta.sql.DataSource.Factory",
                         Constants.DBCP_DATASOURCE_FACTORY);
             try {
                 factory = (ObjectFactory) Class.forName(
@@ -54,9 +54,9 @@ public class ResourceFactory extends FactoryBase {
                 ex.initCause(e);
                 throw ex;
             }
-        } else if (ref.getClassName().equals("javax.mail.Session")) {
+        } else if (ref.getClassName().equals("jakarta.mail.Session")) {
             String javaxMailSessionFactoryClassName =
-                System.getProperty("javax.mail.Session.Factory",
+                System.getProperty("jakarta.mail.Session.Factory",
                         "org.apache.naming.factory.MailSessionFactory");
             try {
                 factory = (ObjectFactory) Class.forName(

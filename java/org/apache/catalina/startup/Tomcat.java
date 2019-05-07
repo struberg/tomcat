@@ -38,9 +38,9 @@ import java.util.jar.JarFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.servlet.Servlet;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
+import jakarta.servlet.Servlet;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 
 import org.apache.catalina.Container;
 import org.apache.catalina.Context;
@@ -225,7 +225,7 @@ public class Tomcat {
      * directory. The equivalent of the default web.xml will be applied  to the
      * web application and any WEB-INF/web.xml and META-INF/context.xml packaged
      * with the application will be processed normally. Normal web fragment and
-     * {@link javax.servlet.ServletContainerInitializer} processing will be
+     * {@link jakarta.servlet.ServletContainerInitializer} processing will be
      * applied.
      *
      * @param contextPath The context mapping to use, "" for root context.
@@ -294,11 +294,11 @@ public class Tomcat {
      * that there is no JSP support (no JSP servlet), no default servlet and
      * no web socket support unless explicitly enabled via the programmatic
      * interface. There is also no
-     * {@link javax.servlet.ServletContainerInitializer} processing and no
+     * {@link jakarta.servlet.ServletContainerInitializer} processing and no
      * annotation processing. If a
-     * {@link javax.servlet.ServletContainerInitializer} is added
+     * {@link jakarta.servlet.ServletContainerInitializer} is added
      * programmatically, there will still be no scanning for
-     * {@link javax.servlet.annotation.HandlesTypes} matches.
+     * {@link jakarta.servlet.annotation.HandlesTypes} matches.
      *
      * <p>
      * API calls equivalent with web.xml:
@@ -1115,7 +1115,7 @@ public class Tomcat {
         @SuppressWarnings("deprecation")
         public ExistingStandardWrapper( Servlet existing ) {
             this.existing = existing;
-            if (existing instanceof javax.servlet.SingleThreadModel) {
+            if (existing instanceof jakarta.servlet.SingleThreadModel) {
                 singleThreadModel = true;
                 instancePool = new Stack<>();
             }

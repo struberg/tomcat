@@ -34,7 +34,7 @@ requirements, without having to create custom Model MBean implementation
 classes yourself.  However, one of the requirements in creating such a
 Model MBean is to create the corresponding metadata information (i.e. an
 implementation of the
-<code>javax.management.modelmbean.ModelMBeanInfo</code> interface and its
+<code>jakarta.management.modelmbean.ModelMBeanInfo</code> interface and its
 corresponding subordinate interfaces).  Creating this information can be
 tedious and error prone.  The <em>Modeler</em> package makes the process
 much simpler, because the required information is constructed dynamically
@@ -75,7 +75,7 @@ is executed.</p>
 
 <p><em>Modeler</em> requires that you construct a configuration file that
 describes the metadata ultimately need to construct the
-<code>javax.management.modelmbean.ModelMBeanInfo</code> structure that is
+<code>jakarta.management.modelmbean.ModelMBeanInfo</code> structure that is
 required by JMX.  Your XML file must conform to the
 <a href="../../../../../../mbeans-descriptors.dtd">mbeans-descriptors.dtd</a>
 DTD that defines the acceptable structure.</p>

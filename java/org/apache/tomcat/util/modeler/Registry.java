@@ -509,7 +509,7 @@ public class Registry implements RegistryMBean, MBeanRegistration {
         if (type == null || "java.lang.String".equals(type)) {
             // string is default
             objValue = value;
-        } else if ("javax.management.ObjectName".equals(type) || "ObjectName".equals(type)) {
+        } else if ("jakarta.management.ObjectName".equals(type) || "ObjectName".equals(type)) {
             try {
                 objValue = new ObjectName(value);
             } catch (MalformedObjectNameException e) {

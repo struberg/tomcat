@@ -97,8 +97,8 @@ public class DataSourceLinkFactory extends ResourceLinkFactory {
 
     /**
      * Simple wrapper class that will allow a user to configure a ResourceLink for a data source
-     * so that when {@link javax.sql.DataSource#getConnection()} is called, it will invoke
-     * {@link javax.sql.DataSource#getConnection(String, String)} with the preconfigured username and password.
+     * so that when {@link jakarta.sql.DataSource#getConnection()} is called, it will invoke
+     * {@link jakarta.sql.DataSource#getConnection(String, String)} with the preconfigured username and password.
      */
     public static class DataSourceHandler implements InvocationHandler {
         private final DataSource ds;

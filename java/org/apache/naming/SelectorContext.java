@@ -171,7 +171,7 @@ public class SelectorContext implements Context {
      *
      * @param name the name to bind; may not be empty
      * @param obj the object to bind; possibly null
-     * @throws javax.naming.NameAlreadyBoundException if name is already
+     * @throws javax.namingNameAlreadyBoundException if name is already
      * bound
      * @throws javax.naming.directory.InvalidAttributesException if object did not
      * supply all mandatory attributes
@@ -189,7 +189,7 @@ public class SelectorContext implements Context {
      *
      * @param name the name to bind; may not be empty
      * @param obj the object to bind; possibly null
-     * @throws javax.naming.NameAlreadyBoundException if name is already
+     * @throws javax.namingNameAlreadyBoundException if name is already
      * bound
      * @throws javax.naming.directory.InvalidAttributesException if object did not
      * supply all mandatory attributes
@@ -250,7 +250,7 @@ public class SelectorContext implements Context {
      * NameNotFoundException if any of the intermediate contexts do not exist.
      *
      * @param name the name to bind; may not be empty
-     * @throws javax.naming.NameNotFoundException if an intermediate context
+     * @throws javax.namingNameNotFoundException if an intermediate context
      * does not exist
      * @throws NamingException if a naming exception is encountered
      */
@@ -265,7 +265,7 @@ public class SelectorContext implements Context {
      * Unbinds the named object.
      *
      * @param name the name to bind; may not be empty
-     * @throws javax.naming.NameNotFoundException if an intermediate context
+     * @throws javax.namingNameNotFoundException if an intermediate context
      * does not exist
      * @throws NamingException if a naming exception is encountered
      */
@@ -284,7 +284,7 @@ public class SelectorContext implements Context {
      *
      * @param oldName the name of the existing binding; may not be empty
      * @param newName the name of the new binding; may not be empty
-     * @throws javax.naming.NameAlreadyBoundException if name is already
+     * @throws javax.namingNameAlreadyBoundException if name is already
      * bound
      * @throws NamingException if a naming exception is encountered
      */
@@ -301,7 +301,7 @@ public class SelectorContext implements Context {
      *
      * @param oldName the name of the existing binding; may not be empty
      * @param newName the name of the new binding; may not be empty
-     * @throws javax.naming.NameAlreadyBoundException if name is already
+     * @throws javax.namingNameAlreadyBoundException if name is already
      * bound
      * @throws NamingException if a naming exception is encountered
      */
@@ -428,9 +428,9 @@ public class SelectorContext implements Context {
      * the foreign context's "native" naming system.
      *
      * @param name the name of the context to be destroyed; may not be empty
-     * @throws javax.naming.NameNotFoundException if an intermediate context
+     * @throws javax.namingNameNotFoundException if an intermediate context
      * does not exist
-     * @throws javax.naming.NotContextException if the name is bound but does
+     * @throws javax.namingNotContextException if the name is bound but does
      * not name a context, or does not name a context of the appropriate type
      */
     @Override
@@ -444,9 +444,9 @@ public class SelectorContext implements Context {
      * Destroys the named context and removes it from the namespace.
      *
      * @param name the name of the context to be destroyed; may not be empty
-     * @throws javax.naming.NameNotFoundException if an intermediate context
+     * @throws javax.namingNameNotFoundException if an intermediate context
      * does not exist
-     * @throws javax.naming.NotContextException if the name is bound but does
+     * @throws javax.namingNotContextException if the name is bound but does
      * not name a context, or does not name a context of the appropriate type
      */
     @Override
@@ -464,7 +464,7 @@ public class SelectorContext implements Context {
      *
      * @param name the name of the context to create; may not be empty
      * @return the newly created context
-     * @throws javax.naming.NameAlreadyBoundException if name is already
+     * @throws javax.namingNameAlreadyBoundException if name is already
      * bound
      * @throws javax.naming.directory.InvalidAttributesException if creation of the
      * sub-context requires specification of mandatory attributes
@@ -482,7 +482,7 @@ public class SelectorContext implements Context {
      *
      * @param name the name of the context to create; may not be empty
      * @return the newly created context
-     * @throws javax.naming.NameAlreadyBoundException if name is already
+     * @throws javax.namingNameAlreadyBoundException if name is already
      * bound
      * @throws javax.naming.directory.InvalidAttributesException if creation of the
      * sub-context requires specification of mandatory attributes
@@ -691,7 +691,7 @@ public class SelectorContext implements Context {
      * OperationNotSupportedException is thrown.
      *
      * @return this context's name in its own namespace; never null
-     * @throws javax.naming.OperationNotSupportedException if the naming
+     * @throws javax.namingOperationNotSupportedException if the naming
      * system does not have the notion of a full name
      * @throws NamingException if a naming exception is encountered
      */

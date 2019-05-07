@@ -176,7 +176,7 @@ public class DiskFileItem
         this.repository = repository;
     }
 
-    // ------------------------------- Methods from javax.activation.DataSource
+    // ------------------------------- Methods from jakarta.activation.DataSource
 
     /**
      * Returns an {@link java.io.InputStream InputStream} that can be

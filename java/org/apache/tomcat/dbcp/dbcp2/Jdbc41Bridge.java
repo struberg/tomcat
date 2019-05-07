@@ -475,7 +475,7 @@ public class Jdbc41Bridge {
         try {
             return commonDataSource.getParentLogger();
         } catch (final AbstractMethodError e) {
-            throw new SQLFeatureNotSupportedException("javax.sql.CommonDataSource#getParentLogger()");
+            throw new SQLFeatureNotSupportedException("jakarta.sql.CommonDataSource#getParentLogger()");
         }
     }
 

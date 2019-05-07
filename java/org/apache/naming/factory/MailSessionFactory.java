@@ -23,9 +23,9 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Properties;
 
-import javax.mail.Authenticator;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
+import jakarta.mail.Authenticator;
+import jakarta.mail.PasswordAuthentication;
+import jakarta.mail.Session;
 import javax.naming.Context;
 import javax.naming.Name;
 import javax.naming.RefAddr;
@@ -49,7 +49,7 @@ import javax.naming.spi.ObjectFactory;
  * configuration file.  An example of factory configuration is:</p>
  * <pre>
  * &lt;Resource name="mail/smtp" auth="CONTAINER"
- *           type="javax.mail.Session"/&gt;
+ *           type="jakarta.mail.Session"/&gt;
  * &lt;ResourceParams name="mail/smtp"&gt;
  *   &lt;parameter&gt;
  *     &lt;name&gt;factory&lt;/name&gt;
@@ -70,7 +70,7 @@ public class MailSessionFactory implements ObjectFactory {
     /**
      * The Java type for which this factory knows how to create objects.
      */
-    protected static final String factoryType = "javax.mail.Session";
+    protected static final String factoryType = "jakarta.mail.Session";
 
 
     /**

@@ -73,7 +73,7 @@ public class MemoryUserDatabaseFactory implements ObjectFactory {
                                     Hashtable<?,?> environment)
         throws Exception {
 
-        // We only know how to deal with <code>javax.naming.Reference</code>s
+        // We only know how to deal with <code>javax.namingReference</code>s
         // that specify a class name of "org.apache.catalina.UserDatabase"
         if ((obj == null) || !(obj instanceof Reference)) {
             return null;

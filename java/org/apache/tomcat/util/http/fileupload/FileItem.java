@@ -36,17 +36,17 @@ import java.io.UnsupportedEncodingException;
  * it into memory, which may come handy with large files.
  *
  * <p> While this interface does not extend
- * <code>javax.activation.DataSource</code> per se (to avoid a seldom used
+ * <code>jakarta.activation.DataSource</code> per se (to avoid a seldom used
  * dependency), several of the defined methods are specifically defined with
  * the same signatures as methods in that interface. This allows an
  * implementation of this interface to also implement
- * <code>javax.activation.DataSource</code> with minimal additional work.
+ * <code>jakarta.activation.DataSource</code> with minimal additional work.
  *
  * @since 1.3 additionally implements FileItemHeadersSupport
  */
 public interface FileItem extends FileItemHeadersSupport {
 
-    // ------------------------------- Methods from javax.activation.DataSource
+    // ------------------------------- Methods from jakarta.activation.DataSource
 
     /**
      * Returns an {@link java.io.InputStream InputStream} that can be

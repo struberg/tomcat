@@ -206,6 +206,9 @@
     <pathelement location="${saaj-api.jar}"/>
     <pathelement location="${jaxrpc-lib.jar}"/>
     <pathelement location="${wsdl4j-lib.jar}"/>
+    <fileset dir="${basedir}/target/dependency/">
+      <include name="**/*.jar"/>
+    </fileset>
   </path>
 
   <path id="tomcat.classpath">

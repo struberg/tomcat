@@ -487,12 +487,12 @@
 
       <attribute name="referrals" required="false">
         <p>How do we handle JNDI referrals? Allowed values are
-        "ignore", "follow", or "throw"  (see javax.naming.Context.REFERRAL
-        for more information).
-        Microsoft Active Directory often returns referrals.
-        If you need to follow them set referrals to "follow".
-        Caution: if your DNS is not part of AD, the LDAP client lib might try
-        to resolve your domain name in DNS to find another LDAP server.</p>
+            "ignore", "follow", or "throw" (see javax.naming.Context.REFERRAL
+            for more information).
+            Microsoft Active Directory often returns referrals.
+            If you need to follow them set referrals to "follow".
+            Caution: if your DNS is not part of AD, the LDAP client lib might try
+            to resolve your domain name in DNS to find another LDAP server.</p>
       </attribute>
 
       <attribute name="roleBase" required="false">
@@ -501,7 +501,7 @@
         If specified it may optionally include pattern replacements
         &quot;{0}&quot;..&quot;{n}&quot; corresponding to the name parts of the
         user's distinguished name (as returned by
-        <code>javax.naming.Name.get()</code>).</p>
+        <code>javax.namingName.get()</code>).</p>
       </attribute>
 
       <attribute name="roleName" required="false">

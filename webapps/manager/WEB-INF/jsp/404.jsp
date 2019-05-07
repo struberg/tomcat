@@ -32,11 +32,8 @@
  <body>
    <h1>404 Not found</h1>
    <p>
-    The page you tried to access
-    (<%=Escape.htmlElementContent((String) request.getAttribute(
-            "javax.servlet.error.request_uri"))%>)
-    does not exist.
-   </p>
+       The page you tried to access
+       (</p>
    <p>
     The Manager application has been re-structured for Tomcat 7 onwards and some
     of URLs have changed. All URLs used to access the Manager application should

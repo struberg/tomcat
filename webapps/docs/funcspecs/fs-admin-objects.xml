@@ -351,7 +351,7 @@ Operations</a> that can be performed when the administrative application is
 <section name="JDBC Resource">
 
   <p>A <em>JDBC Resources</em> represents a database connection pool (i.e.
-  an implementation of <code>javax.sql.DataSource</code> that will be
+  an implementation of <code>jakarta.sql.DataSource</code> that will be
   configured and made available in the JNDI naming context associated with
   a web application.</p>
 

@@ -26,7 +26,7 @@
  * </p>
  * <p>
  * A: There are two primary ways to access the DBCP pool, as a {@link java.sql.Driver Driver}, or as a
- * {@link javax.sql.DataSource DataSource}. You'll want to create an instance of
+ * {@link jakarta.sql.DataSource DataSource}. You'll want to create an instance of
  * {@link org.apache.tomcat.dbcp.dbcp2.PoolingDriver} or {@link org.apache.tomcat.dbcp.dbcp2.PoolingDataSource}. When using one
  * of these interfaces, you can just use your JDBC objects the way you normally would. Closing a
  * {@link java.sql.Connection} will simply return it to its pool.
@@ -59,14 +59,14 @@
  * Several implementations of {@link org.apache.tomcat.dbcp.dbcp2.ConnectionFactory} are provided--one that uses
  * {@link java.sql.DriverManager} to create connections
  * ({@link org.apache.tomcat.dbcp.dbcp2.DriverManagerConnectionFactory}), one that uses a {@link java.sql.Driver} to create
- * connections ({@link org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory}), one that uses a {@link javax.sql.DataSource}
+ * connections ({@link org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory}), one that uses a {@link jakarta.sql.DataSource}
  * to create connections ({@link org.apache.tomcat.dbcp.dbcp2.DataSourceConnectionFactory}).
  * </p>
  * <p>
  * Q: I think I'm starting to get it, but can you walk me though it again?
  * </p>
  * <p>
- * A: Sure. Let's assume you want to create a {@link javax.sql.DataSource} that pools {@link java.sql.Connection}s.
+ * A: Sure. Let's assume you want to create a {@link jakarta.sql.DataSource} that pools {@link java.sql.Connection}s.
  * Let's also assume that those pooled {@link java.sql.Connection}s should be obtained from the
  * {@link java.sql.DriverManager}. You'll want to create a {@link org.apache.tomcat.dbcp.dbcp2.PoolingDataSource}.
  * </p>
@@ -105,7 +105,7 @@
  * </pre>
  * <p>
  * To create a {@link org.apache.tomcat.dbcp.dbcp2.PoolingDriver}, we do the same thing, except that instead of creating a
- * {@link javax.sql.DataSource} on the last line, we create a {@link org.apache.tomcat.dbcp.dbcp2.PoolingDriver}, and
+ * {@link jakarta.sql.DataSource} on the last line, we create a {@link org.apache.tomcat.dbcp.dbcp2.PoolingDriver}, and
  * register the {@code connectionPool} with it. E.g.,:
  * </p>
  *

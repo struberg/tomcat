@@ -203,13 +203,13 @@ public class BasicDataSourceFactory implements ObjectFactory {
     public Object getObjectInstance(final Object obj, final Name name, final Context nameCtx,
             final Hashtable<?, ?> environment) throws Exception {
 
-        // We only know how to deal with <code>javax.naming.Reference</code>s
-        // that specify a class name of "javax.sql.DataSource"
+        // We only know how to deal with <code>javax.namingReference</code>s
+        // that specify a class name of "jakarta.sql.DataSource"
         if (obj == null || !(obj instanceof Reference)) {
             return null;
         }
         final Reference ref = (Reference) obj;
-        if (!"javax.sql.DataSource".equals(ref.getClassName())) {
+        if (!"jakarta.sql.DataSource".equals(ref.getClassName())) {
             return null;
         }
 

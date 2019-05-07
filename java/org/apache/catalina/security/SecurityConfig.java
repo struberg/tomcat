@@ -41,7 +41,7 @@ public final class SecurityConfig{
                                                 + ",org.apache.coyote."
                                                 + ",org.apache.tomcat.";
 
-    // FIX ME package "javax." was removed to prevent HotSpot
+    // FIX ME package "jakarta." was removed to prevent HotSpot
     // fatal internal errors
     private static final String PACKAGE_DEFINITION= "java.,sun."
                                                 + ",org.apache.catalina."

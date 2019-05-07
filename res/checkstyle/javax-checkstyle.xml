@@ -27,7 +27,7 @@
   <property name="cacheFile"
             value="${tomcat.output}/res/checkstyle/cachefile-javax-checkstyle.xml"/>
 
-  <!-- Specific checks for javax.* packages -->
+  <!-- Specific checks for jakarta.* packages -->
 
   <module name="TreeWalker">
     <module name="ImportControl">

@@ -89,7 +89,7 @@ public class TestWebappClassLoader extends TomcatBaseTest {
 
         String[] prefixesPermit = new String[]{
             "org.apache.tomcat.jdbc",
-            "javax.servlet.jsp.jstl",
+            "jakarta.servlet.jsp.jstl",
         };
 
         String[] prefixesDeny = new String[]{
@@ -100,9 +100,9 @@ public class TestWebappClassLoader extends TomcatBaseTest {
             "org.apache.juli",
             "org.apache.naming",
             "org.apache.tomcat",
-            "javax.el",
-            "javax.servlet",
-            "javax.websocket",
+            "jakarta.el",
+            "jakarta.servlet",
+            "jakarta.websocket",
             "javax.security.auth.message"
         };
 

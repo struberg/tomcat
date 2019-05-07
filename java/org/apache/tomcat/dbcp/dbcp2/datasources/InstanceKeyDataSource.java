@@ -1027,7 +1027,7 @@ public abstract class InstanceKeyDataSource implements DataSource, Referenceable
                 cpds = (ConnectionPoolDataSource) ds;
             } else {
                 throw new SQLException("Illegal configuration: " + "DataSource " + dataSourceName + " ("
-                        + ds.getClass().getName() + ")" + " doesn't implement javax.sql.ConnectionPoolDataSource");
+                        + ds.getClass().getName() + ")" + " doesn't implement jakarta.sql.ConnectionPoolDataSource");
             }
         }
 

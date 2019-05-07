@@ -551,7 +551,7 @@ public class JMXAccessorTask extends BaseRedirectorHelperTask {
                 if (isEcho())
                     handleErrorOutput("Unable to convert to double:" + value);
             }
-        } else if ("javax.management.ObjectName".equals(valueType)
+        } else if ("jakarta.management.ObjectName".equals(valueType)
                 || "name".equals(valueType)) {
             try {
                 convertValue = new ObjectName(value);

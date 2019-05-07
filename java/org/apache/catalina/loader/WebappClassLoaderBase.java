@@ -2531,13 +2531,13 @@ public abstract class WebappClassLoaderBase extends URLClassLoader
 
         char ch;
         if (name.startsWith("javax")) {
-            /* 5 == length("javax") */
+            /* 5 == length("jakarta") */
             if (name.length() == 5) {
                 return false;
             }
             ch = name.charAt(5);
             if (isClassName && ch == '.') {
-                /* 6 == length("javax.") */
+                /* 6 == length("jakarta.") */
                 if (name.startsWith("servlet.jsp.jstl.", 6)) {
                     return false;
                 }
@@ -2548,7 +2548,7 @@ public abstract class WebappClassLoaderBase extends URLClassLoader
                     return true;
                 }
             } else if (!isClassName && ch == '/') {
-                /* 6 == length("javax/") */
+                /* 6 == length("jakarta/") */
                 if (name.startsWith("servlet/jsp/jstl/", 6)) {
                     return false;
                 }

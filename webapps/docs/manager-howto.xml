@@ -640,7 +640,7 @@ include an error message.  Possible causes for problems include:</p>
 links for context configuration files.  If you specify the <code>type</code>
 request parameter, the value must be the fully qualified Java class name of
 the resource type you are interested in (for example, you would specify
-<code>javax.sql.DataSource</code> to acquire the names of all available
+<code>jakarta.sql.DataSource</code> to acquire the names of all available
 JDBC data sources).  If you do not specify the <code>type</code> request
 parameter, resources of all types will be returned.</p>
 
@@ -961,8 +961,8 @@ Full thread dump Java HotSpot(TM) Client VM (25.25-b02 mixed mode):
         at org.apache.tomcat.util.Diagnostics.getThreadDump(Diagnostics.java:409)
         at org.apache.catalina.manager.ManagerServlet.threadDump(ManagerServlet.java:557)
         at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:371)
-        at javax.servlet.http.HttpServlet.service(HttpServlet.java:618)
-        at javax.servlet.http.HttpServlet.service(HttpServlet.java:725)
+        at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:618)
+        at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:725)
 ...
 ]]></source>
 

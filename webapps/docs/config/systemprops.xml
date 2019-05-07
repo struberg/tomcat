@@ -75,8 +75,8 @@
   <properties>
 
     <property name="org.apache.el.BeanELResolver. CACHE_SIZE">
-      <p>The number of javax.el.BeanELResolver.BeanProperties objects that will
-      be cached by the EL Parser.</p>
+      <p>The number of jakarta.el.BeanELResolver.BeanProperties objects that will
+          be cached by the EL Parser.</p>
       <p>If not specified, the default of <code>1000</code> will be used.</p>
     </property>
 
@@ -567,17 +567,17 @@
       Context</a> elements.</p>
     </property>
 
-    <property name="javax.sql.DataSource.Factory">
+    <property name="jakarta.sql.DataSource.Factory">
       <p>The class name of the factory to use to create resources of type
-      <code>javax.sql.DataSource</code>. If not specified the default of
+      <code>jakarta.sql.DataSource</code>. If not specified the default of
       <code>org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory</code> is used
       which is a package renamed (to avoid conflicts) copy of
       <a href="https://commons.apache.org/dbcp">Apache Commons DBCP 2</a>.</p>
     </property>
 
-    <property name="javax.mail.Session.Factory">
+    <property name="jakarta.mail.Session.Factory">
       <p>The class name of the factory to use to create resources of type
-      <code>javax.mail.Session</code>. If not specified the default of
+      <code>jakarta.mail.Session</code>. If not specified the default of
       <code>org.apache.naming.factory.MailSessionFactory</code> is used.</p>
     </property>
 

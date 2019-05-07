@@ -110,7 +110,7 @@ public class TestJNDIRealm {
     }
 
 
-    private JNDIRealm buildRealm(String password) throws javax.naming.NamingException,
+    private JNDIRealm buildRealm(String password) throws javax.namingNamingException,
             NoSuchFieldException, IllegalAccessException, LifecycleException {
         Context context = new TesterContext();
         JNDIRealm realm = new JNDIRealm();

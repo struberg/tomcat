@@ -19,12 +19,12 @@ package org.apache.catalina.startup;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import javax.annotation.Resource;
-import javax.annotation.Resources;
-import javax.annotation.security.DeclareRoles;
-import javax.annotation.security.RunAs;
-import javax.servlet.ServletSecurityElement;
-import javax.servlet.annotation.ServletSecurity;
+import jakarta.annotation.Resource;
+import jakarta.annotation.Resources;
+import jakarta.annotation.security.DeclareRoles;
+import jakarta.annotation.security.RunAs;
+import jakarta.servlet.ServletSecurityElement;
+import jakarta.servlet.annotation.ServletSecurity;
 
 import org.apache.catalina.Container;
 import org.apache.catalina.Context;
@@ -342,7 +342,7 @@ public class WebAnnotationSet {
 
             context.getNamingResources().addEnvironment(resource);
 
-        } else if (type.equals("javax.xml.rpc.Service")) {
+        } else if (type.equals("jakarta.xml.rpc.Service")) {
 
             // service-ref element
             ContextService service = new ContextService();
@@ -355,13 +355,13 @@ public class WebAnnotationSet {
 
             context.getNamingResources().addService(service);
 
-        } else if (type.equals("javax.sql.DataSource") ||
-                type.equals("javax.jms.ConnectionFactory") ||
-                type.equals("javax.jms.QueueConnectionFactory") ||
-                type.equals("javax.jms.TopicConnectionFactory") ||
-                type.equals("javax.mail.Session") ||
+        } else if (type.equals("jakarta.sql.DataSource") ||
+                type.equals("jakarta.jms.ConnectionFactory") ||
+                type.equals("jakarta.jms.QueueConnectionFactory") ||
+                type.equals("jakarta.jms.TopicConnectionFactory") ||
+                type.equals("jakarta.mail.Session") ||
                 type.equals("java.net.URL") ||
-                type.equals("javax.resource.cci.ConnectionFactory") ||
+                type.equals("jakarta.resource.cci.ConnectionFactory") ||
                 type.equals("org.omg.CORBA_2_3.ORB") ||
                 type.endsWith("ConnectionFactory")) {
 
@@ -384,8 +384,8 @@ public class WebAnnotationSet {
 
             context.getNamingResources().addResource(resource);
 
-        } else if (type.equals("javax.jms.Queue") ||
-                type.equals("javax.jms.Topic")) {
+        } else if (type.equals("jakarta.jms.Queue") ||
+                type.equals("jakarta.jms.Topic")) {
 
             // message-destination-ref
             MessageDestinationRef resource = new MessageDestinationRef();
@@ -401,8 +401,8 @@ public class WebAnnotationSet {
         } else {
             /*
              * General case. Also used for:
-             * - javax.resource.cci.InteractionSpec
-             * - javax.transaction.UserTransaction
+             * - jakarta.resource.cci.InteractionSpec
+             * - jakarta.transaction.UserTransaction
              */
 
             // resource-env-ref

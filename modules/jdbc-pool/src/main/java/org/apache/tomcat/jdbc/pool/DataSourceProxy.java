@@ -205,7 +205,7 @@ public class DataSourceProxy implements PoolConfiguration {
      * @throws SQLException Connection error
      */
     public javax.sql.PooledConnection getPooledConnection(String username,
-            String password) throws SQLException {
+                                                            String password) throws SQLException {
         return (javax.sql.PooledConnection) getConnection();
     }
 

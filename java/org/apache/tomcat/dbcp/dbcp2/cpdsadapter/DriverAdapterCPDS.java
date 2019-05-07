@@ -47,7 +47,7 @@ import org.apache.tomcat.dbcp.pool2.impl.GenericKeyedObjectPoolConfig;
 
 /**
  * <p>
- * An adapter for JDBC drivers that do not include an implementation of {@link javax.sql.ConnectionPoolDataSource}, but
+ * An adapter for JDBC drivers that do not include an implementation of {@link jakarta.sql.ConnectionPoolDataSource}, but
  * still include a {@link java.sql.DriverManager} implementation. <code>ConnectionPoolDataSource</code>s are not used
  * within general applications. They are used by <code>DataSource</code> implementations that pool
  * <code>Connection</code>s, such as {@link org.apache.tomcat.dbcp.dbcp2.datasources.SharedPoolDataSource}. A J2EE container

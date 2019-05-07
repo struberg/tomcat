@@ -41,12 +41,12 @@ import javax.wsdl.extensions.soap.SOAPAddress;
 import javax.wsdl.factory.WSDLFactory;
 import javax.wsdl.xml.WSDLReader;
 import javax.xml.namespace.QName;
-import javax.xml.rpc.Service;
-import javax.xml.rpc.ServiceFactory;
-import javax.xml.rpc.handler.Handler;
-import javax.xml.rpc.handler.HandlerChain;
-import javax.xml.rpc.handler.HandlerInfo;
-import javax.xml.rpc.handler.HandlerRegistry;
+import jakarta.xml.rpc.Service;
+import jakarta.xml.rpc.ServiceFactory;
+import jakarta.xml.rpc.handler.Handler;
+import jakarta.xml.rpc.handler.HandlerChain;
+import jakarta.xml.rpc.handler.HandlerInfo;
+import jakarta.xml.rpc.handler.HandlerRegistry;
 
 import org.apache.naming.HandlerRef;
 import org.apache.naming.ServiceRef;
@@ -77,7 +77,7 @@ public class ServiceRefFactory implements ObjectFactory {
             if (tcl == null)
                 tcl = this.getClass().getClassLoader();
             ServiceFactory factory = ServiceFactory.newInstance();
-            javax.xml.rpc.Service service = null;
+            jakarta.xml.rpc.Service service = null;
 
             // Service Interface
             RefAddr tmp = ref.get(ServiceRef.SERVICE_INTERFACE);
@@ -147,7 +147,7 @@ public class ServiceRefFactory implements ObjectFactory {
                     if (wsdlRefAddr == null) {
                         if (!Service.class.isAssignableFrom(serviceInterfaceClass)) {
                             throw new NamingException
-                            ("service Interface should extend javax.xml.rpc.Service");
+                            ("service Interface should extend jakarta.xml.rpc.Service");
                         }
                         service = factory.loadService( serviceInterfaceClass );
                     } else {
@@ -225,7 +225,7 @@ public class ServiceRefFactory implements ObjectFactory {
             Class<?>[] serviceInterfaces = serviceInterfaceClass.getInterfaces();
 
             Class<?>[] interfaces = Arrays.copyOf(serviceInterfaces, serviceInterfaces.length + 1);
-            interfaces[interfaces.length - 1] = javax.xml.rpc.Service.class;
+            interfaces[interfaces.length - 1] = jakarta.xml.rpc.Service.class;
 
             Object proxyInstance = null;
             try {

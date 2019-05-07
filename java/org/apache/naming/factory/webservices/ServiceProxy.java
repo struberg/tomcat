@@ -24,8 +24,8 @@ import java.util.Hashtable;
 import java.util.Iterator;
 
 import javax.xml.namespace.QName;
-import javax.xml.rpc.Service;
-import javax.xml.rpc.ServiceException;
+import jakarta.xml.rpc.Service;
+import jakarta.xml.rpc.ServiceException;
 
 import org.apache.naming.StringManager;
 

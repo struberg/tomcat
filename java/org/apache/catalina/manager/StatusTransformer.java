@@ -35,7 +35,7 @@ import java.util.Vector;
 import javax.management.MBeanServer;
 import javax.management.ObjectInstance;
 import javax.management.ObjectName;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.tomcat.util.ExceptionUtils;
 import org.apache.tomcat.util.security.Escape;

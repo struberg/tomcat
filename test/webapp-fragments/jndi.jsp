@@ -17,15 +17,15 @@
 <%@page contentType="text/plain" pageEncoding="UTF-8"%><%
     String jndiName = request.getParameter("jndiName");
 
-    javax.naming.Context initCtx = new javax.naming.InitialContext();
+    javax.naming.Context initCtx = new javax.namingInitialContext();
     javax.naming.Context envCtx = (javax.naming.Context) initCtx.lookup("java:comp/env");
 
     try {
         Object obj = envCtx.lookup(jndiName);
         out.println(obj.toString());
-    } catch (javax.naming.NameNotFoundException e) {
+    } catch (javax.namingNameNotFoundException e) {
         out.println("Not Found");
-    } catch (javax.naming.NamingException e) {
+    } catch (javax.namingNamingException e) {
         out.println("Naming Error");
     }
 %>

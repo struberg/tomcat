@@ -844,7 +844,7 @@ public final class StandardServer extends LifecycleMBeanBase implements Server {
      * @exception MBeanException
      *            if the initializer of the object throws an exception, or
      *            persistence is not supported
-     * @exception javax.management.RuntimeOperationsException
+     * @exception jakarta.management.RuntimeOperationsException
      *            if an exception is reported by the persistence mechanism
      */
     public synchronized void storeConfig() throws InstanceNotFoundException, MBeanException {
@@ -874,7 +874,7 @@ public final class StandardServer extends LifecycleMBeanBase implements Server {
      * @exception MBeanException
      *            if the initializer of the object throws an exception
      *            or persistence is not supported
-     * @exception javax.management.RuntimeOperationsException
+     * @exception jakarta.management.RuntimeOperationsException
      *            if an exception is reported by the persistence mechanism
      */
     public synchronized void storeContext(Context context) throws InstanceNotFoundException, MBeanException {

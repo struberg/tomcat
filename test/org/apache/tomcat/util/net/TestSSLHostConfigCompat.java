@@ -181,7 +181,7 @@ public class TestSSLHostConfigCompat extends TomcatBaseTest {
     }
 
 
-    @Test(expected=javax.net.ssl.SSLHandshakeException.class)
+    @Test(expected= javax.net.ssl.SSLHandshakeException.class)
     public void testHostRSAwithECClient() throws Exception {
         configureHostRSA();
 
@@ -207,7 +207,7 @@ public class TestSSLHostConfigCompat extends TomcatBaseTest {
     }
 
 
-    @Test(expected=javax.net.ssl.SSLHandshakeException.class)
+    @Test(expected= javax.net.ssl.SSLHandshakeException.class)
     public void testHostECwithRSAClient() throws Exception {
         configureHostEC();
 

@@ -35,14 +35,14 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.annotation.Resource;
-import javax.ejb.EJB;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import jakarta.annotation.Resource;
+import jakarta.ejb.EJB;
 import javax.naming.Context;
 import javax.naming.NamingException;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceUnit;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.PersistenceUnit;
 import javax.xml.ws.WebServiceRef;
 
 import org.apache.catalina.ContainerServlet;
@@ -74,7 +74,7 @@ public class DefaultInstanceManager implements InstanceManager {
     static {
         Class<?> clazz = null;
         try {
-            clazz = Class.forName("javax.ejb.EJB");
+            clazz = Class.forName("jakarta.ejb.EJB");
         } catch (ClassNotFoundException cnfe) {
             // Expected
         }
@@ -82,7 +82,7 @@ public class DefaultInstanceManager implements InstanceManager {
 
         clazz = null;
         try {
-            clazz = Class.forName("javax.persistence.PersistenceContext");
+            clazz = Class.forName("jakarta.persistence.PersistenceContext");
         } catch (ClassNotFoundException cnfe) {
             // Expected
         }
@@ -90,7 +90,7 @@ public class DefaultInstanceManager implements InstanceManager {
 
         clazz = null;
         try {
-            clazz = Class.forName("javax.xml.ws.WebServiceRef");
+            clazz = Class.forName("jakarta.xml.ws.WebServiceRef");
         } catch (ClassNotFoundException cnfe) {
             // Expected
         }
@@ -289,7 +289,7 @@ public class DefaultInstanceManager implements InstanceManager {
      * @param injections    map of injections for this class from xml deployment
      *                      descriptor
      * @throws IllegalAccessException       if injection target is inaccessible
-     * @throws javax.naming.NamingException if value cannot be looked up in jndi
+     * @throws javax.namingNamingException if value cannot be looked up in jndi
      * @throws java.lang.reflect.InvocationTargetException
      *                                      if injection fails
      */
@@ -461,7 +461,7 @@ public class DefaultInstanceManager implements InstanceManager {
      * @param instance   instance to inject into
      * @param injections map of injections for this class from xml deployment descriptor
      * @throws IllegalAccessException       if injection target is inaccessible
-     * @throws javax.naming.NamingException if value cannot be looked up in jndi
+     * @throws javax.namingNamingException if value cannot be looked up in jndi
      * @throws java.lang.reflect.InvocationTargetException
      *                                      if injection fails
      */
@@ -566,7 +566,7 @@ public class DefaultInstanceManager implements InstanceManager {
      * @param name     jndi name value is bound under
      * @param clazz    class annotation is defined in
      * @throws IllegalAccessException       if field is inaccessible
-     * @throws javax.naming.NamingException if value is not accessible in naming context
+     * @throws javax.namingNamingException if value is not accessible in naming context
      */
     protected static void lookupFieldResource(Context context,
             Object instance, Field field, String name, Class<?> clazz)
@@ -601,7 +601,7 @@ public class DefaultInstanceManager implements InstanceManager {
      * @param name     jndi name value is bound under
      * @param clazz    class annotation is defined in
      * @throws IllegalAccessException       if method is inaccessible
-     * @throws javax.naming.NamingException if value is not accessible in naming context
+     * @throws javax.namingNamingException if value is not accessible in naming context
      * @throws java.lang.reflect.InvocationTargetException
      *                                      if setter call fails
      */

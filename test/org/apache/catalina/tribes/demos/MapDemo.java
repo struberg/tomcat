@@ -27,16 +27,16 @@ import java.awt.event.MouseEvent;
 import java.io.Serializable;
 import java.util.Random;
 
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.TableColumn;
+import jakarta.swing.BoxLayout;
+import jakarta.swing.JButton;
+import jakarta.swing.JFrame;
+import jakarta.swing.JPanel;
+import jakarta.swing.JScrollPane;
+import jakarta.swing.JTable;
+import jakarta.swing.JTextField;
+import jakarta.swing.table.AbstractTableModel;
+import jakarta.swing.table.DefaultTableCellRenderer;
+import jakarta.swing.table.TableColumn;
 
 import org.apache.catalina.tribes.Channel;
 import org.apache.catalina.tribes.ChannelListener;
@@ -476,7 +476,7 @@ public class MapDemo implements ChannelListener, MembershipListener{
         private void printDebugData(JTable table) {
             int numRows = table.getRowCount();
             int numCols = table.getColumnCount();
-            javax.swing.table.TableModel model = table.getModel();
+            jakarta.swing.table.TableModel model = table.getModel();
 
             System.out.println("Value of data: ");
             for (int i = 0; i < numRows; i++) {

@@ -70,7 +70,7 @@ public class TestIntrospectionUtils {
     @Test
     public void testIsInstanceStandardContext07() {
         Assert.assertTrue(IntrospectionUtils.isInstance(
-                StandardContext.class, "javax.management.MBeanRegistration"));
+                StandardContext.class, "jakarta.management.MBeanRegistration"));
     }
 
 
@@ -91,14 +91,14 @@ public class TestIntrospectionUtils {
     @Test
     public void testIsInstanceStandardContext10() {
         Assert.assertTrue(IntrospectionUtils.isInstance(
-                StandardContext.class, "javax.management.NotificationEmitter"));
+                StandardContext.class, "jakarta.management.NotificationEmitter"));
     }
 
 
     @Test
     public void testIsInstanceStandardContext11() {
         Assert.assertTrue(IntrospectionUtils.isInstance(
-                StandardContext.class, "javax.management.NotificationBroadcaster"));
+                StandardContext.class, "jakarta.management.NotificationBroadcaster"));
     }
 
     // And one to check that non-matches return false

@@ -21,10 +21,10 @@ import java.util.Queue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import javax.websocket.ContainerProvider;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
-import javax.websocket.server.ServerEndpointConfig;
+import jakarta.websocket.ContainerProvider;
+import jakarta.websocket.Session;
+import jakarta.websocket.WebSocketContainer;
+import jakarta.websocket.server.ServerEndpointConfig;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -143,7 +143,7 @@ public class TestWsServerContainer extends WebSocketBaseTest {
     }
 
 
-    @Test(expected = javax.websocket.DeploymentException.class)
+    @Test(expected = jakarta.websocket.DeploymentException.class)
     public void testDuplicatePaths_01() throws Exception {
         WsServerContainer sc =
                 new WsServerContainer(new TesterServletContext());
@@ -158,7 +158,7 @@ public class TestWsServerContainer extends WebSocketBaseTest {
     }
 
 
-    @Test(expected = javax.websocket.DeploymentException.class)
+    @Test(expected = jakarta.websocket.DeploymentException.class)
     public void testDuplicatePaths_02() throws Exception {
         WsServerContainer sc =
                 new WsServerContainer(new TesterServletContext());
@@ -173,7 +173,7 @@ public class TestWsServerContainer extends WebSocketBaseTest {
     }
 
 
-    @Test(expected = javax.websocket.DeploymentException.class)
+    @Test(expected = jakarta.websocket.DeploymentException.class)
     public void testDuplicatePaths_03() throws Exception {
         WsServerContainer sc =
                 new WsServerContainer(new TesterServletContext());

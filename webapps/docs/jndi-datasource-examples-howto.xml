@@ -284,7 +284,7 @@ resource to your <a href="config/context.html">Context</a>.</p>
     <!-- url: The JDBC connection url for connecting to your MySQL database.
          -->
 
-  <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+  <Resource name="jdbc/TestDB" auth="Container" type="jakarta.sql.DataSource"
                maxTotal="100" maxIdle="30" maxWaitMillis="10000"
                username="javauser" password="javadude" driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://localhost:3306/javatest"/>
@@ -303,7 +303,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
   <resource-ref>
       <description>DB Connection</description>
       <res-ref-name>jdbc/TestDB</res-ref-name>
-      <res-type>javax.sql.DataSource</res-type>
+      <res-type>jakarta.sql.DataSource</res-type>
       <res-auth>Container</res-auth>
   </resource-ref>
 </web-app>]]></source>
@@ -381,7 +381,7 @@ user scott.</p>
 <p>Use of the OCI driver should simply involve a changing thin to oci in the URL string.
 </p>
 <source><![CDATA[<Resource name="jdbc/myoracle" auth="Container"
-              type="javax.sql.DataSource" driverClassName="oracle.jdbc.OracleDriver"
+              type="jakarta.sql.DataSource" driverClassName="oracle.jdbc.OracleDriver"
               url="jdbc:oracle:thin:@127.0.0.1:1521:mysid"
               username="scott" password="tiger" maxTotal="20" maxIdle="10"
               maxWaitMillis="-1"/>]]></source>
@@ -392,7 +392,7 @@ create you applications web.xml file.</p>
 <source><![CDATA[<resource-ref>
  <description>Oracle Datasource example</description>
  <res-ref-name>jdbc/myoracle</res-ref-name>
- <res-type>javax.sql.DataSource</res-type>
+ <res-type>jakarta.sql.DataSource</res-type>
  <res-auth>Container</res-auth>
 </resource-ref>]]></source>
 <h5>3.   Code example</h5>
@@ -434,7 +434,7 @@ in this file.
 Clarification would be appreciated here.</i></p>
 
 <source><![CDATA[<Resource name="jdbc/postgres" auth="Container"
-          type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+          type="jakarta.sql.DataSource" driverClassName="org.postgresql.Driver"
           url="jdbc:postgresql://127.0.0.1:5432/mydb"
           username="myuser" password="mypasswd" maxTotal="20" maxIdle="10" maxWaitMillis="-1"/>]]></source>
 <h6>2b. Application-specific resource configuration</h6>
@@ -453,7 +453,7 @@ The Context element should look something like the following.
 <source><![CDATA[<Context>
 
 <Resource name="jdbc/postgres" auth="Container"
-          type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+          type="jakarta.sql.DataSource" driverClassName="org.postgresql.Driver"
           url="jdbc:postgresql://127.0.0.1:5432/mydb"
           username="myuser" password="mypasswd" maxTotal="20" maxIdle="10"
 maxWaitMillis="-1"/>
@@ -463,7 +463,7 @@ maxWaitMillis="-1"/>
 <source><![CDATA[<resource-ref>
  <description>postgreSQL Datasource example</description>
  <res-ref-name>jdbc/postgres</res-ref-name>
- <res-type>javax.sql.DataSource</res-type>
+ <res-type>jakarta.sql.DataSource</res-type>
  <res-auth>Container</res-auth>
 </resource-ref>]]></source>
 
@@ -508,7 +508,7 @@ driver(Oracle8i 8.1.7.1 JDBC/OCI Driver) from <a href="http://otn.oracle.com/">o
 <p>
 After renaming <code>classes12.zip</code> file to <code>classes12.jar</code>
 for Tomcat, copy it into <code>$CATALINA_HOME/lib</code>.
-You may also have to remove the <code>javax.sql.*</code> classes
+You may also have to remove the <code>jakarta.sql.*</code> classes
 from this file depending upon the version of Tomcat and JDK you are using.
 </p>
 </subsection>

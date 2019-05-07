@@ -15,7 +15,7 @@
   limitations under the License.
 --%>
 <%@ page import="javax.naming.Context" %>
-<%@ page import="javax.naming.InitialContext" %>
+<%@ page import="javax.namingInitialContext" %>
 <head>
   <body>
     <%

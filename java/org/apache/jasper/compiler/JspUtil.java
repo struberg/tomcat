@@ -396,7 +396,7 @@ public class JspUtil {
                         + ") "
                         + "org.apache.jasper.runtime.PageContextImpl.proprietaryEvaluate"
                         + "(" + Generator.quote(expression) + ", " + targetType
-                        + ".class, " + "(javax.servlet.jsp.PageContext)" + jspCtxt + ", "
+                        + ".class, " + "(jakarta.servlet.jsp.PageContext)" + jspCtxt + ", "
                         + fnmapvar + ")");
 
         /*

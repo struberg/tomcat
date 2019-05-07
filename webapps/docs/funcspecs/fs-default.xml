@@ -108,7 +108,7 @@
         lists the welcome file names that have been defined for this
         web application.</li>
     <li>The container shall provide a servlet context attribute that
-        contains a <code>javax.naming.directory.DirContext</code>
+        contains a <code>javax.namingdirectory.DirContext</code>
         implementation representing the static resources of this
         web application.</li>
     </ul>
@@ -138,7 +138,7 @@
 
     <p>For all HTTP request methods, the resource path is determined from
     the path information provided to this request, either as request attribute
-    <code>javax.servlet.include.path_info</code> (for a request dispatcher
+    <code>jakarta.servlet.include.path_info</code> (for a request dispatcher
     access to a static resource) or by calling
     <code>request.getPathInfo()</code> directly.</p>
 

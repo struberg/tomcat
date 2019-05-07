@@ -46,7 +46,7 @@ public class StarvationTest extends DefaultTestCase {
 //        config();
 //        this.transferProperties();
 //        this.tDatasource.getConnection().close();
-//        javax.sql.DataSource datasource = this.tDatasource;
+//        jakarta.sql.DataSource datasource = this.tDatasource;
 //        Connection con1 = datasource.getConnection();
 //        Connection con2 = null;
 //        try {

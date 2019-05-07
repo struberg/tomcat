@@ -16,14 +16,14 @@
 --%>
 <%@ taglib prefix="tags" tagdir="/WEB-INF/tags" %>
 <%!
-static class TestListener implements javax.el.ELContextListener {
+static class TestListener implements jakarta.el.ELContextListener {
 
     private int jspCount = 0;
     private int tagCount = 0;
 
     @Override
-    public void contextCreated(javax.el.ELContextEvent event) {
-        javax.el.ELContext elContext = event.getELContext();
+    public void contextCreated(jakarta.el.ELContextEvent event) {
+        jakarta.el.ELContext elContext = event.getELContext();
         if (elContext instanceof org.apache.jasper.el.ELContextImpl) {
             jspCount++;
         } else {

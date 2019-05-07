@@ -906,7 +906,7 @@
       <fix>
         When running under a <code>SecurityManager</code>, ensure that the
         <code>ServiceLoader</code> look-up for the default
-        <code>javax.websocket.server.ServerEndpointConfig.Configurator</code>
+        <code>jakarta.websocket.server.ServerEndpointConfig.Configurator</code>
         implementation completes correctly rather than silently using the
         hard-coded fall-back. (markt)
       </fix>
@@ -2216,7 +2216,7 @@
       </add>
       <fix>
         Register MBean when DataSource Resource <code>
-        type="javax.sql.XADataSource"</code>. Patch provided by Masafumi Miura.
+          type="jakarta.sql.XADataSource"</code>. Patch provided by Masafumi Miura.
         (csutherl)
       </fix>
       <fix>
@@ -4244,7 +4244,7 @@
       </update>
       <fix>
         <bug>61065</bug>: Ensure that once the class is resolved by
-        <code>javax.el.ImportHandler#resolveClass</code> it will be cached with
+        <code>jakarta.el.ImportHandler#resolveClass</code> it will be cached with
         the proper name. (violetagg)
       </fix>
     </changelog>
@@ -4351,14 +4351,14 @@
         the unit tests. (markt)
       </fix>
       <fix>
-        When there is no <code>javax.servlet.WriteListener</code> registered
-        then a call to <code>javax.servlet.ServletOutputStream#isReady</code>
+        When there is no <code>jakarta.servlet.WriteListener</code> registered
+        then a call to <code>jakarta.servlet.ServletOutputStream#isReady</code>
         will return <code>false</code> instead of throwing
         <code>IllegalStateException</code>. (violetagg)
       </fix>
       <fix>
-        When there is no <code>javax.servlet.ReadListener</code> registered
-        then a call to <code>javax.servlet.ServletInputStream#isReady</code>
+        When there is no <code>jakarta.servlet.ReadListener</code> registered
+        then a call to <code>jakarta.servlet.ServletInputStream#isReady</code>
         will return <code>false</code> instead of throwing
         <code>IllegalStateException</code>. (violetagg)
       </fix>
@@ -6443,11 +6443,11 @@
         request. (remm)
       </fix>
       <fix>
-        Ensure that <code>javax.servlet.ServletRequest</code> and
-        <code>javax.servlet.ServletResponse</code> provided during
-        <code>javax.servlet.AsyncListener</code> registration are made
-        available via <code>javax.servlet.AsyncEvent.getSuppliedRequest</code>
-        and <code>javax.servlet.AsyncEvent.getSuppliedResponse</code>
+        Ensure that <code>jakarta.servlet.ServletRequest</code> and
+        <code>jakarta.servlet.ServletResponse</code> provided during
+        <code>jakarta.servlet.AsyncListener</code> registration are made
+        available via <code>jakarta.servlet.AsyncEvent.getSuppliedRequest</code>
+        and <code>jakarta.servlet.AsyncEvent.getSuppliedResponse</code>
         (violetagg)
       </fix>
       <fix>
@@ -6996,7 +6996,7 @@
       </update>
       <fix>
         <bug>57583</bug>: Improve the performance of
-        <code>javax.servlet.jsp.el.ScopedAttributeELResolver</code> when
+        <code>jakarta.servlet.jsp.el.ScopedAttributeELResolver</code> when
         resolving attributes that do not exist. This improvement only works when
         Jasper is used with Tomcat's EL implementation. (markt)
       </fix>

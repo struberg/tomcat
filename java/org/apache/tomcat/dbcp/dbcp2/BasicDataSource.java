@@ -54,7 +54,7 @@ import org.apache.tomcat.dbcp.pool2.impl.GenericObjectPoolConfig;
 
 /**
  * <p>
- * Basic implementation of <code>javax.sql.DataSource</code> that is configured via JavaBeans properties. This is not
+ * Basic implementation of <code>jakarta.sql.DataSource</code> that is configured via JavaBeans properties. This is not
  * the only way to combine the <em>commons-dbcp2</em> and <em>commons-pool2</em> packages, but provides a "one stop
  * shopping" solution for basic requirements.
  * </p>

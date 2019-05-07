@@ -67,7 +67,7 @@
       <li>Tomcat jdbc pool is a Tomcat module, it depends on Tomcat JULI, a
           simplified logging framework used in Tomcat.</li>
       <li>Retrieve the underlying connection using the
-          <code>javax.sql.PooledConnection</code> interface.</li>
+          <code>jakarta.sql.PooledConnection</code> interface.</li>
       <li>Starvation proof. If a pool is empty, and threads are waiting for a
           connection, when a connection is returned, the pool will awake the
           correct thread waiting. Most pools will simply starve.</li>
@@ -76,7 +76,7 @@
   <p>Features added over other connection pool implementations</p>
     <ol>
       <li>Support for highly concurrent environments and multi core/cpu systems.</li>
-      <li>Dynamic implementation of interface, will support <code>java.sql</code> and <code>javax.sql</code> interfaces for
+      <li>Dynamic implementation of interface, will support <code>java.sql</code> and <code>jakarta.sql</code> interfaces for
           your runtime environment (as long as your JDBC driver does the same), even when compiled with a lower version of the JDK.</li>
       <li>Validation intervals - we don't have to validate every single time we use the connection, we can do this
           when we borrow or return the connection, just not more frequent than an interval we can configure.</li>
@@ -86,7 +86,7 @@
           This allows you to write custom interceptors to enhance the functionality. You can use interceptors to gather query stats,
           cache session states, reconnect the connection upon failures, retry queries, cache query results, and so on.
           Your options are endless and the interceptors are dynamic, not tied to a JDK version of a
-          <code>java.sql</code>/<code>javax.sql</code> interface.</li>
+          <code>java.sql</code>/<code>jakarta.sql</code> interface.</li>
       <li>High performance - we will show some differences in performance later on</li>
       <li>Extremely simple, due to the very simplified implementation, the line count and source file count are very low, compare with c3p0
           that has over 200 source files(last time we checked), Tomcat jdbc has a core of 8 files, the connection pool itself is about half
@@ -104,7 +104,7 @@
       <li>Get JMX notifications and log entries when connections are suspected for being abandoned. This is similar to
           the <code>removeAbandonedTimeout</code> but it doesn't take any action, only reports the information.
           This is achieved using the <code>suspectTimeout</code> attribute.</li>
-      <li>Connections can be retrieved from a <code>java.sql.Driver</code>, <code>javax.sql.DataSource</code> or <code>javax.sql.XADataSource</code>
+      <li>Connections can be retrieved from a <code>java.sql.Driver</code>, <code>jakarta.sql.DataSource</code> or <code>jakarta.sql.XADataSource</code>
           This is achieved using the <code>dataSource</code> and <code>dataSourceJNDI</code> attributes.</li>
       <li>XA connection support</li>
     </ol>
@@ -165,7 +165,7 @@
         <p>factory is required, and the value should be <code>org.apache.tomcat.jdbc.pool.DataSourceFactory</code></p>
       </attribute>
       <attribute name="type" required="true">
-        <p>Type should always be <code>javax.sql.DataSource</code> or <code>javax.sql.XADataSource</code></p>
+        <p>Type should always be <code>jakarta.sql.DataSource</code> or <code>jakarta.sql.XADataSource</code></p>
         <p>Depending on the type a <code>org.apache.tomcat.jdbc.pool.DataSource</code> or a <code>org.apache.tomcat.jdbc.pool.XADataSource</code> will be created.</p>
       </attribute>
     </attributes>
@@ -351,8 +351,8 @@
 
     <attribute name="accessToUnderlyingConnectionAllowed" required="false">
       <p>(boolean) Property not used. Access can be achieved by calling <code>unwrap</code> on the pooled connection.
-         see <code>javax.sql.DataSource</code> interface, or call <code>getConnection</code> through reflection or
-         cast the object as <code>javax.sql.PooledConnection</code></p>
+         see <code>jakarta.sql.DataSource</code> interface, or call <code>getConnection</code> through reflection or
+         cast the object as <code>jakarta.sql.PooledConnection</code></p>
     </attribute>
 
     <attribute name="removeAbandoned" required="false">
@@ -735,7 +735,7 @@
         </p>
       </attribute>
       <attribute name="objectName" required="false">
-        <p>(String) Define a valid <code>javax.management.ObjectName</code> string that will be used to register this object with the platform mbean server
+        <p>(String) Define a valid <code>jakarta.management.ObjectName</code> string that will be used to register this object with the platform mbean server
            The default value is <code>null</code> and the object will be registered using
            tomcat.jdbc:type=org.apache.tomcat.jdbc.pool.interceptor.SlowQueryReportJmx,name=the-name-of-the-pool
         </p>
@@ -819,7 +819,7 @@
     <p>And here is an example on how to configure a resource for JNDI lookups</p>
 <source><![CDATA[<Resource name="jdbc/TestDB"
           auth="Container"
-          type="javax.sql.DataSource"
+          type="jakarta.sql.DataSource"
           factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
           testWhileIdle="true"
           testOnBorrow="true"
@@ -952,11 +952,11 @@
   <subsection name="Getting the actual JDBC connection">
     <p>Connection pools create wrappers around the actual connection in order to properly pool them.
        We also create interceptors in these wrappers to be able to perform certain functions.
-       If there is a need to retrieve the actual connection, one can do so using the <code>javax.sql.PooledConnection</code>
+       If there is a need to retrieve the actual connection, one can do so using the <code>jakarta.sql.PooledConnection</code>
        interface.
     </p>
 <source><![CDATA[  Connection con = datasource.getConnection();
-  Connection actual = ((javax.sql.PooledConnection)con).getConnection();]]></source>
+  Connection actual = ((jakarta.sql.PooledConnection)con).getConnection();]]></source>
 
   </subsection>
 

@@ -21,10 +21,11 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Objects;
 
-import javax.transaction.TransactionManager;
 import javax.transaction.xa.XAException;
-import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
+
+import jakarta.transaction.TransactionManager;
+import jakarta.transaction.xa.XAResource;
 
 import org.apache.tomcat.dbcp.dbcp2.ConnectionFactory;
 
@@ -58,16 +59,7 @@ public class LocalXAConnectionFactory implements XAConnectionFactory {
             this.connection = localTransaction;
         }
 
-        /**
-         * Commits the transaction and restores the original auto commit setting.
-         *
-         * @param xid
-         *            the id of the transaction branch for this connection
-         * @param flag
-         *            ignored
-         * @throws XAException
-         *             if connection.commit() throws a SQLException
-         */
+
         @Override
         public synchronized void commit(final Xid xid, final boolean flag) throws XAException {
             Objects.requireNonNull(xid, "xid is null");
@@ -162,7 +154,7 @@ public class LocalXAConnectionFactory implements XAConnectionFactory {
          * @return true if the specified XAResource == this XAResource; false otherwise
          */
         @Override
-        public boolean isSameRM(final XAResource xaResource) {
+        public boolean isSameRM(final javax.transaction.xa.XAResource xaResource) {
             return this == xaResource;
         }
 
