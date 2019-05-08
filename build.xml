@@ -251,9 +251,9 @@
     <include name="**/LICENSE"/>
     <include name="**/NOTICE"/>
     <include name="**/RELEASE-NOTES"/>
-    <include name="**/javax.servlet.ServletContainerInitializer"/>
-    <include name="**/javax.websocket.ContainerProvider"/>
-    <include name="**/javax.websocket.server.ServerEndpointConfig$Configurator"/>
+    <include name="**/jakarta.servlet.ServletContainerInitializer"/>
+    <include name="**/jakarta.websocket.ContainerProvider"/>
+    <include name="**/jakarta.websocket.server.ServerEndpointConfig$Configurator"/>
     <include name="**/.gitignore"/>
     <include name="**/*.bnd"/>
     <include name="**/*.classpath"/>
@@ -308,32 +308,32 @@
   <!-- ========= Pattern sets used to control content of JAR files ========= -->
   <!-- Pattern sets for jar files in standard distributions -->
   <patternset id="files.annotations-api">
-    <include name="javax/annotation/**" />
+    <include name="jakarta/annotation/**" />
   </patternset>
 
   <patternset id="files.servlet-api">
-    <include name="javax/servlet/*" />
-    <include name="javax/servlet/annotation/**" />
-    <include name="javax/servlet/descriptor/**" />
-    <include name="javax/servlet/http/**" />
-    <include name="javax/servlet/resources/**" />
-    <exclude name="javax/servlet/jsp"/>
+    <include name="jakarta/servlet/*" />
+    <include name="jakarta/servlet/annotation/**" />
+    <include name="jakarta/servlet/descriptor/**" />
+    <include name="jakarta/servlet/http/**" />
+    <include name="jakarta/servlet/resources/**" />
+    <exclude name="jakarta/servlet/jsp"/>
   </patternset>
 
   <patternset id="files.jsp-api">
-    <include name="javax/servlet/jsp/**" />
+    <include name="jakarta/servlet/jsp/**" />
   </patternset>
 
   <patternset id="files.el-api">
-    <include name="javax/el/**" />
+    <include name="jakarta/el/**" />
   </patternset>
 
   <patternset id="files.websocket-api">
-    <include name="javax/websocket/**" />
+    <include name="jakarta/websocket/**" />
   </patternset>
 
   <patternset id="files.jaspic-api">
-    <include name="javax/security/auth/message/**" />
+    <include name="jakarta/security/auth/message/**" />
   </patternset>
 
   <patternset id="files.tomcat-websocket">
@@ -604,7 +604,7 @@
     </checkstyle>
     <!-- javax package checks -->
     <checkstyle config="res/checkstyle/javax-checkstyle.xml">
-      <fileset dir="java/javax" >
+      <fileset dir="java/jakarta" >
         <include name="**/*.java"/>
       </fileset>
     </checkstyle>
@@ -978,6 +978,12 @@
       <zipfileset file="${tomcat.manifests}/default.license"
         fullpath="META-INF/LICENSE" />
     </jar>
+
+    <copy todir="${tomcat.build}/lib/">
+      <fileset dir="${basedir}/target/dependency/">
+        <include name="**/*.jar"/>
+      </fileset>
+    </copy>
 
   </target>
 
@@ -1460,7 +1466,7 @@
            includeantruntime="true">
       <classpath refid="tomcat.test.classpath" />
       <include name="org/apache/**" />
-      <include name="javax/**" />
+      <include name="jakarta/**" />
       <include name="util/**" />
       <!-- Exclude these by default as Gump can't run them because the -->
       <!-- classes on which they depend are not in any output JAR.     -->
@@ -1875,8 +1881,8 @@ Apache Tomcat ${version} native binaries for Win64 AMD64/EMT64 platform.
 
   <target name="javadoc" depends="dist-source"
     description="Create the Tomcat javadoc" >
-    <javadoc packagenames="javax.servlet.*"
-      excludepackagenames="javax.servlet.jsp.*"
+    <javadoc packagenames="jakarta.servlet.*"
+      excludepackagenames="jakarta.servlet.jsp.*"
       sourcepath="${tomcat.dist}/src/java"
       destdir="${tomcat.dist}/webapps/docs/servletapi"
       version="true"
@@ -1896,7 +1902,7 @@ Apache Tomcat ${version} native binaries for Win64 AMD64/EMT64 platform.
         <path location="${ant.core.lib}"/>
       </classpath>
     </javadoc>
-    <javadoc packagenames="javax.servlet.jsp.*"
+    <javadoc packagenames="jakarta.servlet.jsp.*"
       sourcepath="${tomcat.dist}/src/java"
       destdir="${tomcat.dist}/webapps/docs/jspapi"
       version="true"
@@ -1916,7 +1922,7 @@ Apache Tomcat ${version} native binaries for Win64 AMD64/EMT64 platform.
         <path location="${ant.core.lib}"/>
       </classpath>
     </javadoc>
-    <javadoc packagenames="javax.el.*"
+    <javadoc packagenames="jakarta.el.*"
       sourcepath="${tomcat.dist}/src/java"
       destdir="${tomcat.dist}/webapps/docs/elapi"
       version="true"
@@ -1936,7 +1942,7 @@ Apache Tomcat ${version} native binaries for Win64 AMD64/EMT64 platform.
         <path location="${ant.core.lib}"/>
       </classpath>
     </javadoc>
-    <javadoc packagenames="javax.websocket.*"
+    <javadoc packagenames="jakarta.websocket.*"
       sourcepath="${tomcat.dist}/src/java"
       destdir="${tomcat.dist}/webapps/docs/websocketapi"
       version="true"
