@@ -19,7 +19,7 @@ package org.apache.catalina.authenticator.jaspic;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.security.auth.message.MessageInfo;
+import jakarta.security.auth.message.MessageInfo;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 

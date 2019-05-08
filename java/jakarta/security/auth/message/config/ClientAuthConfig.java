@@ -14,12 +14,12 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package javax.security.auth.message.config;
+package jakarta.security.auth.message.config;
 
 import java.util.Map;
 
 import javax.security.auth.Subject;
-import javax.security.auth.message.AuthException;
+import jakarta.security.auth.message.AuthException;
 
 public interface ClientAuthConfig extends AuthConfig {
 

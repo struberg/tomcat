@@ -14,14 +14,14 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package javax.security.auth.message.module;
+package jakarta.security.auth.message.module;
 
 import java.util.Map;
 
 import javax.security.auth.callback.CallbackHandler;
-import javax.security.auth.message.AuthException;
-import javax.security.auth.message.ClientAuth;
-import javax.security.auth.message.MessagePolicy;
+import jakarta.security.auth.message.AuthException;
+import jakarta.security.auth.message.ClientAuth;
+import jakarta.security.auth.message.MessagePolicy;
 
 public interface ClientAuthModule extends ClientAuth {
 

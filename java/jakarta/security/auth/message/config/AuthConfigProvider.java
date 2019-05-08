@@ -14,10 +14,10 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package javax.security.auth.message.config;
+package jakarta.security.auth.message.config;
 
 import javax.security.auth.callback.CallbackHandler;
-import javax.security.auth.message.AuthException;
+import jakarta.security.auth.message.AuthException;
 
 public interface AuthConfigProvider {
 
