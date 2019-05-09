@@ -27,7 +27,7 @@ import jakarta.transaction.SystemException;
 import jakarta.transaction.Transaction;
 import jakarta.transaction.TransactionManager;
 import jakarta.transaction.TransactionSynchronizationRegistry;
-import jakarta.transaction.xa.XAResource;
+import javax.transaction.xa.XAResource;
 
 import org.apache.tomcat.dbcp.dbcp2.DelegatingConnection;
 

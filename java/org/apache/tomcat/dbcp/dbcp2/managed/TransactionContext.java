@@ -28,7 +28,7 @@ import jakarta.transaction.Synchronization;
 import jakarta.transaction.SystemException;
 import jakarta.transaction.Transaction;
 import jakarta.transaction.TransactionSynchronizationRegistry;
-import jakarta.transaction.xa.XAResource;
+import javax.transaction.xa.XAResource;
 
 /**
  * TransactionContext represents the association between a single XAConnectionFactory and a Transaction. This context

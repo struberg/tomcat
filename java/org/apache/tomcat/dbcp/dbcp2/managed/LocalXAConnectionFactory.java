@@ -25,7 +25,7 @@ import javax.transaction.xa.XAException;
 import javax.transaction.xa.Xid;
 
 import jakarta.transaction.TransactionManager;
-import jakarta.transaction.xa.XAResource;
+import javax.transaction.xa.XAResource;
 
 import org.apache.tomcat.dbcp.dbcp2.ConnectionFactory;
 
